@@ -63,7 +63,7 @@ If you are learning cybersecurity, treat this as a demonstration, not a weapon.
 
 Below is an example image showing the script running in a controlled test environment:
 
-https://raw.githubusercontent.com/cqlnx/simple-keylogger/refs/heads/main/image.png
+![Screenshot](https://raw.githubusercontent.com/cqlnx/simple-keylogger/main/image.png)
 
 ---
 
