@@ -64,10 +64,3 @@ If you are learning cybersecurity, treat this as a demonstration, not a weapon.
 Below is an example image showing the script running in a controlled test environment:
 
 ![Screenshot](https://raw.githubusercontent.com/cqlnx/simple-keylogger/main/image.png)
-
----
-
-## Final note
-
-Just because something is possible does not mean it should be done.  
-Use your programming knowledge responsibly.
