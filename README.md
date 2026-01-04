@@ -36,11 +36,8 @@ No additional setup is required.
 
 - Do not use this on anyone else  
 - Do not install it on computers you don’t own  
-- Do not hide or distribute this script  
-- Do not compile it into an executable (for example using PyInstaller)  
-
-Turning this into an executable or disguising it would be malicious behavior.
-
+- Do not hide or distribute this script
+  
 ---
 
 ## Educational intent
@@ -50,7 +47,7 @@ This project exists to:
 - Encourage ethical and responsible programming  
 - Help people recognize and understand malicious software  
 
-If you are learning cybersecurity, treat this as a demonstration, not a weapon.
+Treat this as a demonstration, not a weapon.
 
 ---
 
