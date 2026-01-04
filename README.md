@@ -15,11 +15,6 @@ The author is not responsible for any damage, misuse, or legal consequences caus
 This is a very simple Python keylogger created as a learning project.  
 It captures keyboard input and sends it to a Discord webhook.
 
-The purpose of this project is to:
-- Learn how keyboard events work in Python
-- Understand how webhooks can transmit data
-- Demonstrate why keyloggers are dangerous when misused
-
 ---
 
 ## How to test it (your own system only)
